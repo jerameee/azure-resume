@@ -20,8 +20,8 @@
       "type": "cosmosDB",
       "direction": "in",
       "name": "inputDocument",
-      "databaseName": "YourDatabase",
-      "collectionName": "YourCollection",
+      "databaseName": "azureresume",
+      "collectionName": "Counter",
       "connectionStringSetting": "YourCosmosDBConnection",
       "sqlQuery": "SELECT * FROM c WHERE c.id = {id}"
     },
@@ -29,9 +29,11 @@
       "type": "cosmosDB",
       "direction": "out",
       "name": "outputDocument",
-      "databaseName": "YourDatabase",
-      "collectionName": "YourCollection",
-      "connectionStringSetting": "YourCosmosDBConnection"
+      "databaseName": "azureresume",
+      "collectionName": "Counter",
+      "createIfNotExist": "true",
+      "connectionStringSetting": "YourCosmosDBConnection",
+      "id": "1"
     }
   ]
 }
