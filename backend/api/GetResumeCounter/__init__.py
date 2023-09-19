@@ -10,8 +10,8 @@ def main(req: func.HttpRequest, inputDocument: func.DocumentList, outputDocument
     doc = inputDocument[0]
 
     # Incrementing the counter
-    new_counter = doc.get('counter', 0) + 1
-    doc['counter'] = new_counter
+    new_count = doc.get('count', 0) + 1
+    doc['count'] = new_count
 
     # Send modified document to output binding to be saved in CosmosDB
     outputDocument.set(func.document.from_dict(doc))
@@ -20,7 +20,7 @@ def main(req: func.HttpRequest, inputDocument: func.DocumentList, outputDocument
         json.dumps({
             "success": True,
             "id": doc["id"],
-            "counter": new_counter
+            "count": new_count
         }),
         mimetype="application/json"
     )
