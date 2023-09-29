@@ -7,6 +7,13 @@
     "debug.internalConsoleOptions": "neverOpen",
     "azureFunctions.projectSubpath": "backend/api",
     "cSpell.words": [
-        "azureresume"
-    ]
+        "azureresume",
+        "resumedev",
+        "todoitems"
+    ],
+    "azureFunctions.projectLanguageModel": 2,
+    "[python]": {
+        "editor.defaultFormatter": "ms-python.black-formatter"
+    },
+    "python.formatting.provider": "none"
 }
